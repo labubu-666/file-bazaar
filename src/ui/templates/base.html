@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="{{ locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ _("file_manager") }}</title>
+    </head>
+    <body style="display:flex; flex-direction:column; gap: 1rem; height: 100dvh; margin: 0; overflow: hidden;">
+        <header style="padding-left: 1rem; padding-top: 1rem;">
+            <div style="display: flex; gap: 1rem;">
+                <a href="/ui">{{ _("home") }}</a>
+            </div>
+        </header>
+        <main style="flex-grow: 1; overflow: auto; padding: 1rem;">
+            {% block content %}{% endblock %}
+        </main>
+        <footer style="padding-left: 1rem; padding-bottom: 1rem;">
+            <div style="display: flex; gap: 1rem;">
+                <a href="/api/v1/docs">{{ _("docs") }}</a>
+            </div>
+        </footer>
+    </body>
+</html>
